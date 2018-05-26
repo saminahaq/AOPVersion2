@@ -1,0 +1,11 @@
+com/in28minutes/todo/rest/TodoRestController.class
+com/in28minutes/model/Token.class
+com/in28minutes/todo/service/TodoService.class
+com/in28minutes/token/services/TokenService.class
+com/in28minutes/model/Todo.class
+com/in28minutes/token/TokenController.class
+com/in28minutes/common/LogoutController.class
+com/in28minutes/welcome/WelcomeController.class
+com/in28minutes/common/ExceptionController.class
+com/in28minutes/security/SecurityConfiguration.class
+com/in28minutes/todo/TodoController.class

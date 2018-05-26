@@ -1,0 +1,6 @@
+0:0:0:0:0:0:0:1 - - [25/May/2018:19:58:13 -0700] "GET / HTTP/1.1" 302 - http-bio-8080-exec-1 131
+0:0:0:0:0:0:0:1 - - [25/May/2018:19:58:13 -0700] "GET / HTTP/1.1" 302 - http-bio-8080-exec-2 131
+0:0:0:0:0:0:0:1 - - [25/May/2018:19:58:13 -0700] "GET /login HTTP/1.1" 200 535 http-bio-8080-exec-8 8
+0:0:0:0:0:0:0:1 - - [25/May/2018:19:58:16 -0700] "POST /login HTTP/1.1" 302 - http-bio-8080-exec-10 19
+0:0:0:0:0:0:0:1 - - [25/May/2018:19:58:18 -0700] "GET / HTTP/1.1" 200 948 http-bio-8080-exec-10 1778
+0:0:0:0:0:0:0:1 - - [25/May/2018:19:58:18 -0700] "GET /webjars/bootstrap-datepicker/1.0.1/js/bootstrap-datepicker.js HTTP/1.1" 200 32051 http-bio-8080-exec-2 35
