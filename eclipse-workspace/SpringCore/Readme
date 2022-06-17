@@ -1,0 +1,90 @@
+Softwares:
+1=>Eclipse
+2=>TomcatServer
+3=>Mysql
+4=>workbench for mysql gui
+
+1- Create maven project [new project - Other - Maven - Maven project]
+2- Adding dependencies => Spring Core, Spring Context
+3- Creating Bean
+4- creating configuration file => config.xml
+5- Setting Injection
+6-Main class: which canpull the object and use
+
+
+
+Add dependency from Google [Step # 02]
+
+1: Spring Core 
+
+https://mvnrepository.com/artifact/org.springframework/spring-core/5.2.22.RELEASE
+
+2: Spring Context 
+
+
+[Both dependency version shoudl be same e.g <version>5.2.22.RELEASE</version>]
+after that update project 
+
+
+How to create config.XML file:
+1) create xml.config under file
+2) add "NameSpace" from internet [spring 5 documentation pdf], read from that file 
+serach "Configuration metadata" into file 
+serach "The following example shows the basic structure of XML-based configuration metadata"
+copy "beans" namespace.
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+add these 
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context ="http://www.springframework.org/schema/context"
+xmlns:p ="http://www.springframework.org/schema/p"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+</beans>
+
+Further step :
+
+create bean tag and add all POJO classes inside <bean>
+
+<!-- Step # 04-->
+<!--THIS IS OUR BEANS : CALLED METADATA , THROUGH SETTER DEPENDENCY INJECTION , BY PROPERTIES TAGS -->
+
+00:00:08 what is spring framework complete explanation
+00:14:00 spring frameworks modules
+00:26:00 spring IOC container
+00:35:00 dependency injection in spring framework
+00:53:00 starting the practical session
+01:24:00 Injecting values
+01:32:00 Injecting  Collection
+01:53:00 Injecting Reference Type
+02:08:00 Constructor Injection
+02:32:00 Ambiguity problem
+02:43:00 Spring Bean LifeCycle
+03:32:00 Autowiring of spring beans
+03:43:00 Autowiring of spring beans(Practical)
+04:18:00 StandAlone Collections
+
+Reference type in config.xml
+
+A 
+
+Reference Inject :
+
+B
+
+<bean>
+	<property name= "">
+	<ref  bean = "b">
+	</property>
+</bean>	
+

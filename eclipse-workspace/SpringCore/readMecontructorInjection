@@ -1,0 +1,27 @@
+Constructor Injection:
+
+Spring Supports creating injection using parameterized
+
+Scenario # 01 [three styles]
+Style # 01
+<constructor-args>  //thats mean only one filed of POJO in this case e.g private String name; only name
+	<value> name </value>
+</constructor-args>
+
+Style # 02 [using as an property attribute]
+
+<bean class="com.Springs.ConstructorInjection.Person" id="pers">
+<constructor-args value ="samina"/> //be default its string
+<constructor-args value =777 type = "int"/>
+</bean>
+
+
+Style # 03 [Using c-schema "c for constructor access", "p for property p-schema"] 
+
+
+
+For Reference Data Type
+
+<constructor-args>
+	<ref bean = " "/>
+</constructor-args>

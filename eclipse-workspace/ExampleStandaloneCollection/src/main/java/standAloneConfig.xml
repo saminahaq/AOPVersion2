@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context ="http://www.springframework.org/schema/context"
+xmlns:util="http://www.springframework.org/schema/util"
+xmlns:p ="http://www.springframework.org/schema/p"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+https://www.springframework.org/schema/context/spring-context.xsd
+http://www.springframework.org/schema/util
+https://www.springframework.org/schema/util/spring-util.xsd">
+
+
+<!-- Stand alone Collection  [stand alone colection define above the bean]-->
+<!-- list-class="java.util.Vector"-->
+	<util:list list-class="java.util.LinkedList" id="proj">
+		<value>Maths</value>
+		<value>Stats</value>
+		<value>DataScience</value>
+	</util:list>
+
+	<util:list list-class="java.util.LinkedList" id="bestfriends">
+		<value>Samina</value>
+		<value>Sami</value>
+		<value>Samin</value>
+		<value>Sam</value>
+	</util:list>
+
+<!-- Map -->
+
+	<util:map  map-class="java.util.HashMap"  id = "fees">
+		<entry key="Java" value="1000"/>
+		<entry key="Data Science" value="2000"/>
+		<entry key="Stats" value="25810"/>
+		<entry key="Maths" value="36987"/>
+	</util:map>
+	
+
+
+	<bean class="com.Spring.ExampleStandaloneCollection.ExampleStandaloneCollection.Person" id="pers">
+		<!-- <property name="friends">
+			<ref bean="bestfriends" />
+		</property>-->
+		<property name="friends" ref="bestfriends"/>
+		<property name="feesStruture"  ref="fees" />
+		<property name="projects" ref="proj"></property>
+
+</bean>
+
+</beans>

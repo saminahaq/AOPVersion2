@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context ="http://www.springframework.org/schema/context"
+xmlns:p ="http://www.springframework.org/schema/p"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+https://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- Step # 04-->
+	<!--THIS IS OUR BEANS : CALLED METADATA , THROUGH SETTER DEPENDENCY INJECTION , BY PROPERTIES TAGS -->
+	
+<!-- Premitive Type Schema-->
+	<bean class="com.SpringCore.Student" id="student1">
+		<property name="studentId">
+			<value>22344</value>
+		</property>
+
+		<!-- or using the value as attribute [here code looks clean]-->
+		<!-- <property name="studentId" value = "223344"></property> -->
+
+		<property name="studentName">
+			<value>Samina</value>
+		</property>
+
+		<property name="studentAddress">
+			<value>Newyork</value>
+		</property>
+	</bean>
+
+
+	<bean class="com.SpringCore.Student" id="student2">
+	
+	
+	<!-- Using inline value attribute-->
+		<property name="studentId" value="223344"></property>
+		<property name="studentName" value="223344"></property>
+		<property name="studentAddress" value="223344"></property>
+	</bean>
+	
+	<!-- Usig P schema [when there is all in ine line so used self closing tag ">" only]-->
+	<bean class ="com.SpringCore.Student" name="student3" p:studentId ="234578" p:studentName ="samstudent3" p:studentAddress ="Washington"/>
+
+
+<!-- Collection Type Schema-->
+<!-- How to Inject collection types [list, set , map, and properties ]-->
+		<!-- List  [null insert like <null/>]-->
+		
+	<bean>
+		<property name="studentId5 ">
+			<list>
+				<value>One</value>
+				<value>Two</value>
+				<value>Three</value>
+				<null />
+			</list>
+		</property>
+	</bean>
+
+
+<!-- Set  -->
+		
+	<bean>
+		<property name="studentId7 ">
+
+			<set>
+				<value>One</value>
+				<value>Two</value>
+				<value>Three</value>
+				
+			</set>
+
+		</property>
+	</bean>
+
+<!-- Difference between List andSet is in List duplicatae is allowed, and in set duplicate is not allowed-->
+
+
+
+<!-- Map  -->
+		
+	<bean>
+		<property name=" studentId8">
+
+			<map>
+				<entry key = "java"  value ="One"/>
+				<entry key = "java"  value ="One"/>
+				<entry key = "java"  value ="One"/>
+			
+			</map>
+
+		</property>
+	</bean>
+	
+<!-- Properties  -->
+		
+	<bean>
+		<property name=" studentId8">
+
+			<props>
+				<prop key = "java">One</prop>
+				<prop key = "java">Two</prop>
+				<prop key = "java">Three</prop>
+			
+			</props>
+
+
+		</property>
+	</bean>
+
+</beans>
+
