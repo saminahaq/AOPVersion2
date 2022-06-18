@@ -1,0 +1,11 @@
+ExampleAOP
+
+Note: [project started from Maven project not from start.spring.io]
+
+step # 01 
+
+add two dependency into the POM.xml file [both have same version]
+
+1: aspectjrt
+2: aspectjweaver
+
